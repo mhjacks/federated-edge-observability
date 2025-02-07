@@ -11,7 +11,7 @@ global:
     provider: aws
 
 main:
-  clusterGroupName: hub
+  clusterGroupName: hub-vpn
   multiSourceConfig:
     enabled: true
     clusterGroupChartVersion: 0.9.*

@@ -13,7 +13,6 @@ install upgrade deploy: operator-deploy post-install ## Install or upgrade the p
 	echo "Installed/Upgraded"
 
 post-install: ## Post-install tasks - load-secrets
-	make snakeoil-certs
 	make load-secrets
 	echo "Post-deploy complete"
 
