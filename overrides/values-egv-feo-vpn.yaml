@@ -1,7 +1,7 @@
 ---
 vmDefaults:
   cloudInitSecret: secret/data/hub/cloud-init
-  accessMode: "ReadWriteMany"
+  accessMode: "ReadWriteOnce"
   storageClassName: "gp3-csi"
   volumeMode: "Block"
   count: 1
