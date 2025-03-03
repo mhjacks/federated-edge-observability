@@ -11,9 +11,9 @@ vmDefaults:
   storage: 30Gi
   memory: 8Gi
   machineType: pc-q35-rhel8.4.0
-  cores: 4
+  cores: 1
   sockets: 1
-  threads: 8
+  threads: 4
   template: rhel9-server-medium
   sshsecret: secret/data/hub/vm-ssh
   cloudinitsecret: secret/data/hub/cloud-init
@@ -25,21 +25,19 @@ vmDefaults:
       port: 22
       protocol: TCP
       targetPort: 22
+    - name: receptor
+      port: 27199
+      protocol: TCP
+      targetPort: 27199
+    - name: openvpn
+      port: 1194
+      protocol: TCP
+      targetPort: 1194
 
 vms:
   vpn:
     count: 1
     role: vpn
-    ports:
-      - name: ssh
-        port: 22
-        protocol: TCP
-        targetPort: 22
-      - name: receptor
-        port: 27199
-        protocol: TCP
-        targetPort: 27199
-      - name: openvpn
-        port: 1194
-        protocol: TCP
+    routes:
+      - name: vpn-endpoint
         targetPort: 1194

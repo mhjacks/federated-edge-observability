@@ -90,7 +90,7 @@ clusterGroup:
       namespace: edge-gitops-vms
       project: hub
       chart: edge-gitops-vms
-      chartVersion: 0.1.*
+      chartVersion: 0.2.*
       extraValueFiles:
         - '$patternref/overrides/values-egv-feo-vpn.yaml'
 
