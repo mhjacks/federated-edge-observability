@@ -34,6 +34,10 @@ vmDefaults:
       port: 1194
       protocol: TCP
       targetPort: 1194
+    - name: ipsec
+      port: 4500
+      protocol: TCP
+      targetPort: 4500
 
 vms:
   vpn:
