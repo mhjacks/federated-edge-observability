@@ -34,14 +34,6 @@ vmDefaults:
       port: 1194
       protocol: TCP
       targetPort: 1194
-    - name: ipsec
-      port: 4500
-      protocol: TCP
-      targetPort: 4500
-    - name: wireguard
-      port: 51820
-      protocol: UDP
-      targetPort: 51820
 
 vms:
   vpn:
