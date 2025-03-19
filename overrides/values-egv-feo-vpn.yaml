@@ -39,6 +39,3 @@ vms:
   vpn:
     count: 1
     role: vpn
-    routes:
-      - name: vpn-endpoint
-        targetPort: 1194
