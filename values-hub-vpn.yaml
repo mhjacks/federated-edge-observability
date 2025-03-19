@@ -11,12 +11,24 @@ clusterGroup:
     - openshift-cnv
     - edge-gitops-vms
     - edge-observability-stack
+    - open-cluster-management
+    - external-dns-operator
 
   subscriptions:
     aap-operator:
       name: ansible-automation-platform-operator
       namespace: ansible-automation-platform
       channel: stable-2.5
+
+    acm:
+      name: advanced-cluster-management
+      namespace: open-cluster-management
+      channel: release-2.12
+
+    external-dns:
+      name: external-dns-operator
+      namespace: external-dns-operator
+      channel: stable-v1
 
     openshift-virtualization:
       name: kubevirt-hyperconverged
@@ -63,6 +75,18 @@ clusterGroup:
       chartVersion: 0.1.*
       extraValueFiles:
         - '$patternref/overrides/values-aap-config-feo.yaml'
+
+    acm:
+      name: acm
+      namespace: open-cluster-management
+      project: hub
+      chart: acm
+      chartVersion: 0.1.*
+      ignoreDifferences:
+        - group: internal.open-cluster-management.io
+          kind: ManagedClusterInfo
+          jsonPointers:
+            - /spec/loggingCA
 
     vault:
       name: vault
