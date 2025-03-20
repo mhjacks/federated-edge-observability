@@ -1,6 +1,20 @@
 ---
 #waitForMetalNode: false
 
+rbac:
+  roles:
+    - name: view-machine-api
+      createRole: true
+      apiGroups:
+        - cluster.x-k8s.io
+      scope:
+        cluster: true
+      resources:
+        - machinesets
+      verbs:
+        - "get"
+        - "list"
+        - "watch"
 vmDefaults:
   cloudInitSecret: secret/data/hub/cloud-init
   accessMode: "ReadWriteOnce"
