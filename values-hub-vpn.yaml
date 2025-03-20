@@ -130,9 +130,8 @@ clusterGroup:
       name: external-dns-operator
       namespace: external-dns-operator
       project: hub
-      repoURL: https://github.com/validatedpatterns/external-dns-operator-chart.git
-      chartVersion: main
-      path: "."
+      chart: external-dns-operator
+      chartVersion: 0.1.*
 
   # Only the hub cluster here - managed entities are edge nodes
   managedClusterGroups: []
