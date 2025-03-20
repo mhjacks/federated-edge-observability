@@ -1,5 +1,5 @@
 ---
-waitForMetalNode: false
+#waitForMetalNode: false
 
 vmDefaults:
   cloudInitSecret: secret/data/hub/cloud-init
