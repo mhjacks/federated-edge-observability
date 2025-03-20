@@ -39,3 +39,5 @@ vms:
   vpn:
     count: 1
     role: vpn
+    publishService: true
+    externalDNSShortName: vpn-endpoint
