@@ -1,4 +1,6 @@
 ---
+waitForMetalNode: false
+
 vmDefaults:
   cloudInitSecret: secret/data/hub/cloud-init
   accessMode: "ReadWriteOnce"
