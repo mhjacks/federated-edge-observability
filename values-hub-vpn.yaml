@@ -81,7 +81,9 @@ clusterGroup:
       namespace: open-cluster-management
       project: hub
       chart: acm
-      chartVersion: 0.1.*
+      repoURL: https://github.com/mhjacks/acm-chart
+      chartVersion: main
+      path: "."
       ignoreDifferences:
         - group: internal.open-cluster-management.io
           kind: ManagedClusterInfo
