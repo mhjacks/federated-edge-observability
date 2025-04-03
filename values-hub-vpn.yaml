@@ -69,6 +69,9 @@ clusterGroup:
       repoURL: https://github.com/validatedpatterns/aap-instance-chart
       chartVersion: main
       path: "."
+      overrides:
+        - name: eePullSecret.manage
+          value: "true"
 
     aap-config:
       name: aap-config
