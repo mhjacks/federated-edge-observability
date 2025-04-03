@@ -64,7 +64,7 @@ clusterGroup:
       name: ansible-automation-platform
       namespace: ansible-automation-platform
       project: hub
-      chart: ansible-automation-platform-instance
+      #chart: ansible-automation-platform-instance
       repoURL: https://github.com/validatedpatterns/aap-instance-chart
       chartVersion: main
       #chartVersion: 0.1.*
@@ -86,7 +86,7 @@ clusterGroup:
       name: acm
       namespace: open-cluster-management
       project: hub
-      chart: acm
+      #chart: acm
       repoURL: https://github.com/mhjacks/acm-chart
       chartVersion: main
       path: "."
