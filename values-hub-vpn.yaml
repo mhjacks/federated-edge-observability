@@ -65,7 +65,9 @@ clusterGroup:
       namespace: ansible-automation-platform
       project: hub
       chart: ansible-automation-platform-instance
-      chartVersion: 0.1.*
+      #chartVersion: 0.1.*
+      repoURL: https://github.com/validatedpatterns/aap-instance-chart
+      version: main
 
     aap-config:
       name: aap-config
