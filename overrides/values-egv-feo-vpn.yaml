@@ -1,6 +1,8 @@
 ---
 #waitForMetalNode: false
 
+automation_mesh_node: rhel9-vpn-001.edge-gitops-vms.svc
+
 vmDefaults:
   cloudInitSecret: secret/data/hub/cloud-init
   accessMode: "ReadWriteOnce"
