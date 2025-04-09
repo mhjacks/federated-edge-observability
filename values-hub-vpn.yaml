@@ -92,6 +92,9 @@ clusterGroup:
           kind: ManagedClusterInfo
           jsonPointers:
             - /spec/loggingCA
+      overrides:
+        - name: edgeManager.enable
+          value: "true"
 
     vault:
       name: vault
