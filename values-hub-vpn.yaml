@@ -131,6 +131,16 @@ clusterGroup:
       chartVersion: main
       path: "."
 
+    ensure-openshift-console-plugins:
+      name: ensure-openshift-console-plugins
+      namespace: openshift-console
+      project: hub
+      repoURL: https://github.com/validatedpatterns/ensure-openshift-console-plugins-chart.git
+      chartVersion: main
+      path: "."
+      overrides:
+        - '$patternref/overrides/values-eocp-feo-vpn.yaml'
+
     external-dns-operator:
       name: external-dns-operator
       namespace: external-dns-operator
