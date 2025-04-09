@@ -135,9 +135,8 @@ clusterGroup:
       name: ensure-openshift-console-plugins
       namespace: openshift-console
       project: hub
-      repoURL: https://github.com/validatedpatterns/ensure-openshift-console-plugins-chart.git
-      chartVersion: main
-      path: "."
+      chart: ensure-openshift-console-plugins
+      chartVersion: 0.1.*
       extraValueFiles:
         - '$patternref/overrides/values-eocp-feo-vpn.yaml'
 
