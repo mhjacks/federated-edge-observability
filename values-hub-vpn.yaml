@@ -138,7 +138,7 @@ clusterGroup:
       repoURL: https://github.com/validatedpatterns/ensure-openshift-console-plugins-chart.git
       chartVersion: main
       path: "."
-      overrides:
+      extraValueFiles:
         - '$patternref/overrides/values-eocp-feo-vpn.yaml'
 
     external-dns-operator:
@@ -149,4 +149,4 @@ clusterGroup:
       chartVersion: 0.1.*
 
   # Only the hub cluster here - managed entities are edge nodes
-  #managedClusterGroups: []
+  managedClusterGroups: []
